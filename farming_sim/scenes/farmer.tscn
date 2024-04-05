@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://bgm8ek14p6sel"]
 
-[ext_resource type="Script" path="res://Farmer.gd" id="1_y6bol"]
+[ext_resource type="Script" path="res://scripts/Farmer.gd" id="1_y6bol"]
 [ext_resource type="Texture2D" uid="uid://dgtyfa882fyt3" path="res://sprites/new_character.png" id="2_7cs37"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q21v8"]

@@ -1,14 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://05wgt3r237vc"]
+[gd_scene load_steps=4 format=3 uid="uid://05wgt3r237vc"]
 
 [ext_resource type="Texture2D" uid="uid://do7m21qs17i5s" path="res://sprites/e_butt.png" id="1_ifvqb"]
+[ext_resource type="Script" path="res://scripts/EButt.gd" id="3_ruc2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g40ps"]
 
 [node name="Door_checker" type="Area2D"]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_g40ps")
 
 [node name="EButt" type="Sprite2D" parent="."]
-position = Vector2(1, 41)
+visible = false
+position = Vector2(0, 45)
 texture = ExtResource("1_ifvqb")
+script = ExtResource("3_ruc2m")
+
+[connection signal="body_entered" from="." to="EButt" method="_on_door_checker_body_entered"]
+[connection signal="body_exited" from="." to="EButt" method="_on_door_checker_body_exited"]

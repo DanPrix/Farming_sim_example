@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmjf23mx66wnv"]
+
+[ext_resource type="PackedScene" uid="uid://bgm8ek14p6sel" path="res://scenes/farmer.tscn" id="1_wnuxl"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Farmer" parent="." instance=ExtResource("1_wnuxl")]
+position = Vector2(0, -1)
+
+[node name="Camera2D" type="Camera2D" parent="Farmer"]
+zoom = Vector2(2, 2)
