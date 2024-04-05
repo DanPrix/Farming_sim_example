@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://05wgt3r237vc"]
+
+[ext_resource type="Texture2D" uid="uid://do7m21qs17i5s" path="res://sprites/e_butt.png" id="1_ifvqb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g40ps"]
+
+[node name="Door_checker" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g40ps")
+
+[node name="EButt" type="Sprite2D" parent="."]
+position = Vector2(1, 41)
+texture = ExtResource("1_ifvqb")

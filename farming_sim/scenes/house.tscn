@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvn0g7mrmgt4p"]
+
+[ext_resource type="Texture2D" uid="uid://d4bfc22nrbv73" path="res://sprites/house.png" id="1_xpqka"]
+[ext_resource type="PackedScene" uid="uid://05wgt3r237vc" path="res://scenes/door_checker.tscn" id="2_c15rc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8b05f"]
+size = Vector2(84, 63)
+
+[node name="House" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="House" type="Sprite2D" parent="."]
+texture = ExtResource("1_xpqka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16.5)
+shape = SubResource("RectangleShape2D_8b05f")
+
+[node name="Door_checker" parent="." instance=ExtResource("2_c15rc")]
+position = Vector2(0, 47)
